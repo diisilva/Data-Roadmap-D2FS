@@ -6,6 +6,80 @@ O objetivo não é acumular cursos ou conhecer o maior número possível de ferr
 
 Machine learning, IA generativa e desenvolvimento de agentes estão deliberadamente fora do escopo.
 
+## Comece aqui
+
+Não é necessário descobrir sozinho qual pasta ou capítulo abrir. Siga as aulas em ordem:
+
+1. confira os pré-requisitos abaixo;
+2. abra a [Aula 01 — Diagnóstico e ambiente](./aulas/01-diagnostico-e-ambiente.md);
+3. estude somente os links indicados na página da aula;
+4. execute a prática e produza a entrega solicitada;
+5. marque a aula em [PROGRESS.md](./PROGRESS.md) e use o link **Próxima aula**.
+
+Cada aula equivale a uma semana de 8 a 12 horas. Os repositórios em `materials/` são bibliotecas de apoio; você não precisa percorrê-los integralmente.
+
+## Aulas — ordem de execução
+
+### Diagnóstico e análise
+
+| Aula | Tema | Resultado da semana |
+|---:|---|---|
+| 01 | [Diagnóstico e ambiente](./aulas/01-diagnostico-e-ambiente.md) | Ambiente e dataset escolhidos |
+| 02 | [Qualidade e primeira decisão](./aulas/02-qualidade-e-primeira-decisao.md) | Auditoria e primeiro ADR |
+| 03 | [Perguntas, grão e métricas](./aulas/03-perguntas-grao-e-metricas.md) | Especificação analítica |
+| 04 | [SQL analítico](./aulas/04-sql-analitico.md) | Consultas com CTEs e janelas |
+| 05 | [Performance SQL](./aulas/05-performance-sql.md) | Comparação de planos de execução |
+| 06 | [Análise com Python](./aulas/06-analise-com-python.md) | Pipeline de limpeza e agregação |
+| 07 | [Estatística aplicada](./aulas/07-estatistica-aplicada.md) | Análise com incerteza e limitações |
+| 08 | [Visualização e narrativa](./aulas/08-visualizacao-e-narrativa.md) | Relatório visual reproduzível |
+| 09 | [Revisão do case analítico](./aulas/09-revisao-do-case-analitico.md) | Primeiro case publicado |
+
+### Modelagem e engenharia
+
+| Aula | Tema | Resultado da semana |
+|---:|---|---|
+| 10 | [Modelagem de dados](./aulas/10-modelagem-de-dados.md) | Modelos conceitual, lógico e físico |
+| 11 | [Modelagem dimensional](./aulas/11-modelagem-dimensional.md) | Esquema estrela com grão definido |
+| 12 | [dbt e DuckDB](./aulas/12-dbt-e-duckdb.md) | Projeto dbt executado localmente |
+| 13 | [Testes e documentação dbt](./aulas/13-testes-e-documentacao-dbt.md) | Data mart testado e documentado |
+| 14 | [Incrementalidade e linhagem](./aulas/14-incrementalidade-e-linhagem.md) | Modelo incremental e DAG revisado |
+| 15 | [Ingestão e contratos](./aulas/15-ingestao-e-contratos.md) | Contrato da fonte e desenho de ingestão |
+| 16 | [Carga incremental e idempotência](./aulas/16-carga-incremental-e-idempotencia.md) | Carga repetível sem duplicidade |
+| 17 | [Formatos e particionamento](./aulas/17-formatos-e-particionamento.md) | Comparação CSV/JSON/Parquet |
+| 18 | [Camadas de armazenamento](./aulas/18-camadas-de-armazenamento.md) | Fluxo raw/staging/curated |
+| 19 | [Qualidade no pipeline](./aulas/19-qualidade-no-pipeline.md) | Validação e quarentena |
+| 20 | [Pipeline executável](./aulas/20-pipeline-executavel.md) | Pipeline por comando com logs |
+| 21 | [Revisão de engenharia](./aulas/21-revisao-de-engenharia.md) | Release reproduzível |
+
+### Orquestração, escala e streaming
+
+| Aula | Tema | Resultado da semana |
+|---:|---|---|
+| 22 | [Fundamentos de orquestração](./aulas/22-fundamentos-de-orquestracao.md) | Pipeline representado como ativos |
+| 23 | [Recursos, jobs e schedules](./aulas/23-recursos-jobs-e-schedules.md) | Execução agendada |
+| 24 | [Dagster com dbt](./aulas/24-dagster-com-dbt.md) | dbt orquestrado pelo Dagster |
+| 25 | [Partições, backfills e testes](./aulas/25-particoes-backfills-e-testes.md) | Backfill testado |
+| 26 | [Observabilidade e incidentes](./aulas/26-observabilidade-e-incidentes.md) | Falha detectada e recuperada |
+| 27 | [Quando distribuir](./aulas/27-quando-distribuir.md) | ADR local versus distribuído |
+| 28 | [Spark e processamento batch](./aulas/28-spark-e-processamento-batch.md) | Job Spark funcional |
+| 29 | [Performance distribuída](./aulas/29-performance-distribuida.md) | Experimento de particionamento e shuffle |
+| 30 | [Fundamentos de streaming](./aulas/30-fundamentos-de-streaming.md) | Fluxo de eventos definido |
+| 31 | [Tempo, janelas e garantias](./aulas/31-tempo-janelas-e-garantias.md) | Protótipo batch versus streaming |
+
+### Arquitetura e capstone
+
+| Aula | Tema | Resultado da semana |
+|---:|---|---|
+| 32 | [Requisitos de arquitetura](./aulas/32-requisitos-de-arquitetura.md) | Requisitos e atributos de qualidade |
+| 33 | [Warehouse, lake e lakehouse](./aulas/33-warehouse-lake-e-lakehouse.md) | ADR da plataforma de armazenamento |
+| 34 | [Governança, catálogo e contratos](./aulas/34-governanca-catalogo-e-contratos.md) | Modelo de governança |
+| 35 | [Segurança e privacidade](./aulas/35-seguranca-e-privacidade.md) | Matriz de acesso e ameaças |
+| 36 | [Capacidade, continuidade e custos](./aulas/36-capacidade-continuidade-e-custos.md) | SLOs, RPO/RTO e estimativa de custo |
+| 37 | [Capstone: proposta](./aulas/37-capstone-proposta.md) | Proposta aprovada por rubrica |
+| 38 | [Capstone: dados](./aulas/38-capstone-dados.md) | Ingestão, modelo e qualidade |
+| 39 | [Capstone: operação](./aulas/39-capstone-operacao.md) | Orquestração e observabilidade |
+| 40 | [Capstone: entrega](./aulas/40-capstone-entrega.md) | Demonstração e retrospectiva |
+
 ## Para quem é
 
 Esta trilha é indicada para quem já possui os fundamentos e quer avançar para projetos de portfólio com profundidade técnica. Antes de começar, você deve conseguir:
