@@ -1,0 +1,269 @@
+.graph-view.color-fill {
+  /* Supports all CSS color directives, like #HEX, rgb and rgba */
+  color: #7f6df2;
+}
+
+.site-footer {
+  display: none;
+}
+
+.site-body-left-column-site-name {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* Footer Heading */
+h2[data-heading="This note on GitHub"],
+h2[data-heading="This note in GitHub"] {
+    font-size: var(--editor-font-size);
+    text-align: center;
+}
+h2[data-heading="This note on GitHub"]::before,
+h2[data-heading="This note in GitHub"]::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: var(--background-modifier-border);
+    margin-bottom: 10px;
+}
+
+/* Style GitHub footer links */
+span.git-footer {
+  display: block;
+  text-align: center;
+  bottom: 0;
+}
+.git-footer .external-link {
+  background-image: url();
+  padding-right: 0;
+  padding: 6px 15px;
+  background: var(--interactive-normal);
+  border-radius: 4px;
+  text-decoration: none;
+}
+.git-footer .external-link:hover {
+  background: var(--interactive-accent-hover);
+  color: var(--text-on-accent);
+}
+/* Footer Link Icons */
+.git-footer .external-link::before {
+  vertical-align: -3px;
+  padding-right: 4px;
+}
+.git-footer .external-link[title="git-hub-edit-note"]::before {
+  content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M3%2017.25V21h3.75L17.81%209.94l-3.75-3.75L3%2017.25zM20.71%207.04a.996.996%200%200%200%200-1.41l-2.34-2.34a.996.996%200%200%200-1.41%200l-1.83%201.83l3.75%203.75l1.83-1.83z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E');
+}
+.git-footer .external-link[title="git-hub-copy-note"]::before {
+  content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20d%3D%22M216%2032H88a8%208%200%200%200-8%208v40H40a8%208%200%200%200-8%208v128a8%208%200%200%200%208%208h128a8%208%200%200%200%208-8v-40h40a8%208%200%200%200%208-8V40a8%208%200%200%200-8-8zm-8%20128h-32V88a8%208%200%200%200-8-8H96V48h112z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E');
+}
+.git-footer .external-link[title="git-hub-download-vault"]::before {
+  content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%209h-4V3H9v6H5l7%207l7-7zM5%2018v2h14v-2H5z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E')
+}
+
+.list-cards {
+  /* Kepano's List Cards from minimal */
+  /* Use cssclasses: list-cards */
+  --list-cards-template: repeat(2, minmax(0, 1fr));
+}
+.list-cards div > ul {
+  --link-color: var(--text-normal);
+  --link-unresolved-color: var(--text-muted);
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-external-color: var(--text-normal);
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: var(--list-cards-template);
+  padding: 0;
+}
+.list-cards ul > li {
+  margin-inline: 0;
+}
+.list-cards div > ul > li {
+  display: flex;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--color-base-25);
+  flex-wrap: wrap;
+  margin-inline: 0;
+}
+.list-cards div > ul > li a {
+  flex-grow: 0;
+}
+.list-cards div > ul > li a:after {
+  content: "";
+  flex-basis: 100%;
+  height: 0;
+}
+.list-cards div > ul > li a:hover {
+  border-color: var(--color-base-35);
+}
+.list-cards div > ul > li a {
+  flex-grow: 1;
+  padding: 16px;
+  font-weight: var(--font-semibold);
+  background: none;
+}
+.list-cards div > ul > li a:hover {
+  border-color: var(--color-base-35);
+}
+.list-cards div > ul ul {
+  display: block;
+  width: 100%;
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  margin-top: -8px;
+  padding: 0 16px 16px;
+}
+.list-cards div > ul ul > li {
+  display: block;
+  margin-inline-start: 0;
+}
+.theme-dark .list-cards div ul > li {
+  background-color: var(--background-secondary);
+}
+
+.list-cards .icon-app {
+  display: inline-block;
+  align-self: center;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+}
+.list-cards .icon-app + a {
+  padding-left: 52px;
+  align-self: center;
+  line-height: 1.15;
+}
+
+
+/* Clean Embeds */
+/*
+    clean-embeds-all.css snippet
+
+    Removes title, link, padding, margins from embeds,
+    so they really look like the same note.
+
+    This will not require a `cssclass` to be set but work for _all_ notes.
+    Derived from the `clean-embeds.css` snippet.
+
+    2021-08-24 Matthias C. Hormann (Moonbase59)
+
+    TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.
+*/
+
+/* remove title and the table from the "Metatable" plugin */
+.markdown-preview-view .markdown-embed-title,
+.markdown-preview-view .obsidian-metatable {
+  display: none;
+}
+
+/*
+  For links to embeds NOT to be shown, uncomment the following
+  and comment out the other section below.
+*/
+
+/*
+.markdown-preview-view .markdown-embed-link,
+.markdown-preview-view .file-embed-link {
+  display: none;
+}
+*/
+
+/*
+  For links to embeds to BE shown, uncomment the following
+  until the "End link show/hide stuff" comment
+  and comment out the section above.
+*/
+
+/* Link icon */
+.markdown-preview-view .markdown-embed-link,
+.markdown-preview-view .file-embed-link {
+  top: 0;
+  right: 0;
+  left: unset;
+  text-align: right;
+  border: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--text-faint);
+  cursor: pointer;
+}
+
+/* for Ars Magna theme and others that change ::before */
+.markdown-preview-view .markdown-embed-link::before,
+.markdown-preview-view .file-embed-link::before {
+  display: none;
+}
+
+/* Link icon size & hide */
+.markdown-preview-view .file-embed-link svg,
+.markdown-preview-view .markdown-embed-link svg {
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  display: unset;
+}
+
+/* show on hover */
+.markdown-preview-view .markdown-embed:hover .file-embed-link svg,
+.markdown-preview-view .markdown-embed:hover .markdown-embed-link svg {
+  opacity: 1;
+}
+
+/* change background on hover, to exactly see what’s embedded */
+.markdown-preview-view .markdown-embed:hover,
+.markdown-preview-view .file-embed:hover {
+  background-color: var(--background-secondary) !important;
+}
+
+/* End link show/hide stuff */
+
+
+
+/* remove border and scroll */
+/* unfortunately needs !important for some themes */
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.markdown-preview-view .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view { 
+  max-height: unset;
+  padding: 0 !important; /* !important for "Pisum" theme */
+  margin: 0;
+  border: 0;
+}
+
+/* remove <br> between internal embeds */
+.markdown-preview-section div > br {
+  display: none;
+}
+
+
+/* remove vertical space added by markdown-preview-sizer */
+ div.markdown-preview-sizer.markdown-preview-section {
+  min-height: unset !important;
+  padding-bottom: 0 !important;
+}
+
+/* special considerations for printing (PDF export) */
+@media print {
+
+  /* remove frontmatter box if "Show frontmatter" was enabled */
+  /* Also remove metadata table from "Metatable" plugin */
+  pre.frontmatter,
+  .obsidian-metatable {
+    display: none;
+  }
+}

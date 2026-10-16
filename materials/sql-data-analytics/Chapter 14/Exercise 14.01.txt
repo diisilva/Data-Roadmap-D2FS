@@ -1,0 +1,9 @@
+-- Step 2
+
+CREATE TABLE customer_sales_json (
+  customer_json JSONB
+);
+
+\COPY customer_sales_json FROM 'c:\UsersPublic\customer_sales.txt'
+
+

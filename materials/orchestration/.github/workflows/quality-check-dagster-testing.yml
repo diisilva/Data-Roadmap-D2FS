@@ -1,0 +1,19 @@
+name: quality-check-dagster-testing
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - dagster_university/dagster_testing/**
+
+jobs:
+  check:
+    if: github.event.pull_request.draft == false
+    uses: ./.github/workflows/template-quality-check.yml
+    with:
+      working_directory: ./dagster_university/dagster_testing
+      ubuntu_pytest_cmd: uv run pytest tests/completed -v -m "not integration"
+      windows_pytest_cmd: uv run pytest tests/completed -v -m "not integration"
